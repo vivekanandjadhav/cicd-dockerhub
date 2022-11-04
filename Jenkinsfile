@@ -11,5 +11,11 @@ pipeline{
                 sh "mvn clean install"
             }
         }
+        stage('Docker Build and Tag') {
+           steps {
+                sh 'docker build -t samplewebapp:latest .' 
+                sh 'docker tag samplewebapp rutujapawal/samplewebapp:latest'
+                }
+          }
     }
 }   

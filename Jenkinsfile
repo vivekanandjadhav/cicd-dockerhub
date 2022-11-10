@@ -30,12 +30,12 @@ pipeline {
         }
 	stage('Run Docker container on Jenkins Agent') {
             steps {	    
-                      sh "docker run -d -p 4003:8080 rutujapawal/devops-integration"
+                      sh "docker run -d -p 4004:8080 rutujapawal/devops-integration"
                  }
             }
 	 stage('Run Docker container on remote hosts') {
              steps {
-                sh "docker -H ssh-add://ec2-user@13.234.231.172 run -d -p 4003:8080 rutujapawal/devops-integration"
+                sh "docker -H ssh-add://ec2-user@13.234.231.172 run -d -p 4004:8080 rutujapawal/devops-integration"
             }    
         }
     }  

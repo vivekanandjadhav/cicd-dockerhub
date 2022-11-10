@@ -1,6 +1,6 @@
 FROM tomcat:latest
 
-ADD .//var/lib/jenkins/workspace/CI-CD-using-Docker/webapp/target/webapp.war /usr/local/tomcat/webapps/
+ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 

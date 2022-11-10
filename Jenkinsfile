@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@RutujaPawal 
-RutujaPawal
-/
-devops-automation
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-devops-automation/Jenkinsfile
-@RutujaPawal
-RutujaPawal Update Jenkinsfile
-Latest commit 8a3b195 23 hours ago
- History
- 2 contributors
-@basahota@RutujaPawal
-33 lines (31 sloc)  1004 Bytes
-
 pipeline {
     agent any
     tools{
@@ -36,7 +6,7 @@ pipeline {
     stages{
         stage("Build Maven Project"){
             steps{
-               checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Java-Techie-jt/devops-automation.git']]])
+               checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/RutujaPawal/CI-CD-using-Docker.git']]])
                sh 'mvn clean install'
             }
         }

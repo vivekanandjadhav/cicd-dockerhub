@@ -38,4 +38,5 @@ pipeline {
                 sh "docker -H ssh://jenkins@13.234.231.172 run -d -p 8003:8080 rutujapawal/devops-integration"
             }    
         }
-}  
+    }  
+}
